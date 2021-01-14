@@ -1,0 +1,14 @@
+.minesweeperWrapper{
+    position: relative;
+    margin: auto;    
+}
+
+
+.minesweeper{
+    background: red;
+    /* width: 500px;
+    height: 500px; */
+    display: flex;
+    flex-direction: column;
+    border: 5px solid rgb(61, 61, 61);
+}

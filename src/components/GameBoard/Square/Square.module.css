@@ -1,0 +1,62 @@
+.square{
+    cursor: inherit;    
+    background: gray;
+}
+
+.open{    
+    font-weight: 600;
+    cursor: default;
+}
+
+
+.flagged{
+    color: black;
+    font-weight: 800;    
+}
+
+.one{
+    color: blue;
+}
+
+.two{
+    color:rgb(20, 77, 29);
+}
+
+.three{
+    color:rgb(145, 0, 0);
+}
+
+.four{
+    color:purple;
+}
+
+.five{
+    color: #323232;
+}
+
+.six{
+    color: rgb(71, 71, 71)
+}
+
+.seven{
+    color: turquoise;
+}
+
+.danger{
+    color:rgb(255, 0, 0);
+    font-size: 22px;
+    padding-top:4px;      
+}
+
+.boom{
+    color: black;
+    background-color: red;
+    font-size: 22px;
+    padding-top:4px;      
+}
+
+.wrong{
+    color: black;
+    font-weight: 600;
+    font-size: 22px;
+}
