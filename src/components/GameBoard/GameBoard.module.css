@@ -1,0 +1,16 @@
+.gameBoard{
+    display: grid;
+    background: #eee;
+    /* border: 2px solid rgb(97, 97, 97); */
+    /* grid-gap: 1px; */
+
+}
+
+.gameBoard div{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    /* background: gray; */
+    text-align: center;
+    vertical-align: sub;
+}

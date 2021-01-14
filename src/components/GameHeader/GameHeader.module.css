@@ -1,0 +1,25 @@
+.gameHeader{
+    height: 70px;
+    border-bottom: 3px solid rgb(61, 61, 61);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.gameHeader div{
+    flex:1;
+    text-align: center;
+}
+
+.gameHeader div:first-child{
+    text-align: left;
+}
+
+.gameHeader div:nth-child(2){
+    cursor: pointer;
+}
+
+.gameHeader div:last-child{
+    text-align: right;
+}
