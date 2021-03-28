@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .gameHeader{
     height: 70px;
     border-bottom: 3px solid rgb(61, 61, 61);
@@ -22,4 +23,34 @@
 
 .gameHeader div:last-child{
     text-align: right;
+=======
+.gameHeader{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: rgb(133, 133,133);
+    border: 2px solid rgb(88, 88, 88);
+    border-bottom: 2px solid rgb(173, 173, 173);
+    border-right: 2px solid rgb(173, 173, 173);    
+}
+
+.gameHeader div{
+    flex:1;
+    text-align: center;
+}
+
+.gameHeader div:first-child{
+    text-align: left;
+}
+
+.gameHeader div:nth-child(2){
+    cursor: pointer;
+}
+
+.gameHeader div:last-child{
+    text-align: right;
+>>>>>>> master
 }

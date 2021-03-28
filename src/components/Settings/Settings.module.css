@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .settings{
     position: absolute;
     background-color: pink;
@@ -36,3 +37,73 @@ form button{
     height: 30px;
 }
 
+=======
+.settings{
+    position: absolute;
+    background-color: pink;
+    top: 100px;
+    left: calc(50% - 175px);
+    width: 350px;
+    height: auto;
+    /* padding: 10px 0 0px 5px; */
+    border: 2px solid gray
+}
+
+form{
+    padding: 0 5px;
+}
+
+.close{
+    text-align: right;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+.formrow{
+    display: flex;
+    text-align: start;
+
+}
+
+.labels {
+    display: flex;
+    text-align: start;
+    height: 30px;
+    background-color: rgb(231, 170, 181);
+    align-items: center;
+    padding: 0 5px;
+}
+
+.labels p {
+    flex: 1;
+    
+}
+
+.labels p:first-child {
+    flex: 85px;
+}
+
+.formrow div{
+    flex:1;
+    margin: 5px 0;
+}
+
+.formrow div:first-child{
+    flex:85px
+}
+
+.custominput {
+    width: 90%;
+    height: 100%;
+}
+
+form{
+    text-align: center;
+}
+
+form button{
+    width: 100px;
+    height: 30px;
+}
+
+>>>>>>> master
