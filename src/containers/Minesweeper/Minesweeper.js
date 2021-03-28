@@ -4,11 +4,6 @@ import GameBoard from '../../components/GameBoard/GameBoard.js'
 import Settings from '../../components/Settings/Settings.js'
 import { useEffect, useState, useRef } from 'react';
 
-<<<<<<< HEAD
-
-function Minesweeper() {
-    const [gameConfig, setGame] = useState({
-=======
 // const conf = {
 //     beginner: [9, 9, 10],
 //     intermediate: [16, 16, 40],
@@ -25,16 +20,11 @@ const conf = {
 
 function Minesweeper() {
     const [gameConfig, setConf] = useState({
->>>>>>> master
         width: 12,
         height: 10,
         mines: 10
     });
-<<<<<<< HEAD
-    const [board, setBoard] = useState(generateBoard(gameConfig.width, gameConfig.height, gameConfig.mines))
-=======
     const [board, setBoard] = useState(() => generateBoard(gameConfig.width, gameConfig.height, gameConfig.mines))
->>>>>>> master
     const [gameState, setGameState] = useState("ready") //lost/won/ready/playing
     const [opened, setOpened] = useState(0)
     const [flagged, setFlagged] = useState(0)
@@ -114,13 +104,10 @@ function Minesweeper() {
     }
 
     function gameLost(boom) {
-<<<<<<< HEAD
-=======
 
         //we use content -10 and -2 for extra styling options
         //-2 is thew bomb we opened and lost the game
         //-10 are the squares we had flagged as bombs but were safe
->>>>>>> master
         const newBoard = [...board];
         newBoard.forEach(tile => {
             if (tile.content === -1 && !tile.isFlagged)
@@ -147,8 +134,6 @@ function Minesweeper() {
         setGameState("won")
     }
 
-<<<<<<< HEAD
-=======
     let clicks = 0
     function handleClick() {
         if (settingsOpen) return
@@ -173,57 +158,21 @@ function Minesweeper() {
         setFlagged(0);
         setTimer(0)
     }
->>>>>>> master
     const openSettings = () => {
         console.log("open settings")
         setSettingsOpen(!settingsOpen)
     }
 
-<<<<<<< HEAD
-=======
     const closeSettings = () => {
         console.log("closing..")
         setSettingsOpen(!settingsOpen)
     }
->>>>>>> master
     // const onChangeValue = (evt) => {
     //     console.log(evt.target.value)
     // }
 
     const settingsChanged = (evt) => {
         evt.preventDefault();
-<<<<<<< HEAD
-        console.log('form sub')
-        const setting = evt.target.elements.setting.value;
-
-        const newConf = {};
-        if (setting == 'beginner') {
-            console.log('beginner set')
-            newConf.width = 9;
-            newConf.height = 9;
-            newConf.mines = 10;
-        }
-        if (setting == 'intermediate') {
-            console.log('intermediate set')
-            newConf.width = 16;
-            newConf.height = 16;
-            newConf.mines = 40;
-        }
-        if (setting == 'expert') {
-            console.log('expert set')
-            newConf.width = 16;
-            newConf.height = 30;
-            newConf.mines = 99;
-        }
-        if (setting == 'custom') {
-            console.log('custom set')
-            newConf.width = parseInt(evt.target.elements.cW.value);
-            if (newConf.width != newConf.width || newConf.width < 5) newConf.width = 5;
-            if (newConf.width > 30) newConf.width = 30
-            newConf.height = parseInt(evt.target.elements.cH.value);
-            if (newConf.height != newConf.height || newConf.height < 5) newConf.height = 5;
-            if (newConf.height > 30) newConf.height = 30
-=======
         const setting = evt.target.elements.setting.value;
         if (setting === "") {
             setSettingsOpen(false);
@@ -245,19 +194,11 @@ function Minesweeper() {
             newConf.height = Math.min(30, newConf.height);
             // if (newConf.height > 30) newConf.height = 30
 
->>>>>>> master
             newConf.mines = parseInt(evt.target.elements.cM.value);
             if (newConf.mines != newConf.mines || newConf.mines < 5) newConf.mines = 5;
             if (newConf.mines > newConf.height * newConf.width) newConf.mines = newConf.height * newConf.width - 1
 
         }
-<<<<<<< HEAD
-        // console.log(newConf.width, newConf.height, newConf.mines)
-        setSettingsOpen(false);
-        const newBoard = generateBoard(newConf.width, newConf.height, newConf.mines);
-        setBoard(newBoard)
-        setGame(newConf)
-=======
         else {
             newConf = { ...conf[setting] }
         }
@@ -268,7 +209,6 @@ function Minesweeper() {
         const newBoard = generateBoard(newConf.width, newConf.height, newConf.mines);
         setBoard(newBoard)
         setConf(newConf)
->>>>>>> master
         setGameState('ready')
         setOpened(0);
         setFlagged(0);
@@ -287,11 +227,7 @@ function Minesweeper() {
             <div className={classes.minesweeper}
                 ref={minesweeperBoard}>
 
-<<<<<<< HEAD
-                <GameHeader doubleClicked={openSettings} time={timer} minesLeft={gameConfig.mines - flagged}>
-=======
                 <GameHeader clicked={handleClick} time={timer} minesLeft={gameConfig.mines - flagged}>
->>>>>>> master
                     {status}
                 </GameHeader>
 
@@ -303,13 +239,8 @@ function Minesweeper() {
                     clicked={revealTileHandler}
                     right_clicked={flagHandler}
                 />
-<<<<<<< HEAD
-            </div >
-            { settingsOpen ? <Settings submitted={settingsChanged} /> : null}
-=======
             </div>
             { settingsOpen ? <Settings submitted={settingsChanged} clicked={closeSettings} /> : null}
->>>>>>> master
         </div>
     );
 }
@@ -321,11 +252,7 @@ export default Minesweeper;
 //content: can be -1 for bomb or a number >= 0 showing neighbouring bombs
 //neighbours: an array with neighbouring squares (3-8)
 //isOpen: has the player revealed this square?
-<<<<<<< HEAD
-//isFlagged ??? has the player flagged it??
-=======
 //isFlagged ??? has the player flagged it (right click)
->>>>>>> master
 class Tile {
     constructor(content) {
         this.content = content;
@@ -366,11 +293,7 @@ function generateBoard(width, height, mines) {
         newSquare.neighbours = newNeighbours;
     }
 
-<<<<<<< HEAD
-    //seet up mines
-=======
     //set up mines
->>>>>>> master
     let i = 1;
 
     while (i <= mines) {
