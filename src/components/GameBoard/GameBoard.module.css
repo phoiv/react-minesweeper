@@ -2,7 +2,11 @@
     display: grid;
     background: #eee;
     /* border: 2px solid rgb(97, 97, 97); */
-    /* grid-gap: 1px; */
+    /* grid-gap: 1px; */ 
+    border: 2px solid rgb(88, 88, 88);
+    border-bottom: 2px solid rgb(173, 173, 173);
+    border-right: 2px solid rgb(173, 173, 173);
+    outline: 5px solid rgb(133, 133, 133);
 
 }
 

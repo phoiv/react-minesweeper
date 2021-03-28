@@ -1,5 +1,5 @@
 .square{
-    cursor: inherit;    
+    cursor: pointer;    
     background: gray;
 }
 
@@ -8,54 +8,53 @@
     cursor: default;
 }
 
-
 .flagged{
     color: black;
     font-weight: 800;    
 }
 
-.one{
+.color1, .color0{
     color: blue;
 }
 
-.two{
+.color2{
     color:rgb(20, 77, 29);
 }
 
-.three{
+.color3{
     color:rgb(145, 0, 0);
 }
 
-.four{
+.color4{
     color:purple;
 }
 
-.five{
+.color5{
     color: #323232;
 }
 
-.six{
+.color6{
     color: rgb(71, 71, 71)
 }
 
-.seven{
+.color7{
     color: turquoise;
 }
 
-.danger{
+.color-1{
     color:rgb(255, 0, 0);
     font-size: 22px;
     padding-top:4px;      
 }
 
-.boom{
+.color-2{
     color: black;
     background-color: red;
     font-size: 22px;
     padding-top:4px;      
 }
 
-.wrong{
+.color-10{
     color: black;
     font-weight: 600;
     font-size: 22px;

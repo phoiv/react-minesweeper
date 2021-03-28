@@ -5,10 +5,11 @@
 
 
 .minesweeper{
-    background: red;
+    background-color: gray;
     /* width: 500px;
     height: 500px; */
     display: flex;
     flex-direction: column;
-    border: 5px solid rgb(61, 61, 61);
+    border: 5px solid rgb(133, 133, 133);
+    /* box-shadow: 3px 3px 1px 1px rgb(71, 71, 71); */
 }
