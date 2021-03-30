@@ -3,9 +3,9 @@
 
 CONTROLS:
 
-+left click to open tile
++left click a tile to reveal
 
-+right click to flag it as bomb
++right click a tile to flag it for bomb
 
 
 SETTINGS:
